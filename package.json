@@ -1,0 +1,15 @@
+{
+  "name": "ssz-stip-proxy",
+  "version": "1.0.0",
+  "description": "Dockerfile and configuration for varnish and tinyproxy.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/statistikstadtzuerich/ssz-stip-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/statistikstadtzuerich/ssz-stip-proxy/issues"
+  },
+  "homepage": "https://github.com/statistikstadtzuerich/ssz-stip-proxy#readme"
+}

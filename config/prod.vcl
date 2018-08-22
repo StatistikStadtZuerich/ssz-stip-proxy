@@ -41,6 +41,7 @@ sub vcl_recv {
   elsif (req.http.host ~ "stat.stadt-zuerich.ch|stat-prod.zazuko.com") {
     if (req.url == "/api" || req.url ~ "^/js/.*$" || req.url ~ "^/sparql/.*$" || req.url ~ "^/query.*$" || req.url ~ "(\?|\&)format=" || (req.http.Accept !~ "html" && req.url !~ "^/_next/" && req.url !~ "^/static/")) {
       set req.backend_hint = stat;
+      unset req.http.Cookie;
     }
     elseif(req.url ~ "^/screenshot/.*$" || req.url ~ "^/pdf/.*$") {
       set req.backend_hint = puppetron;
